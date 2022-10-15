@@ -20,9 +20,11 @@ public class GrabController : MonoBehaviour
     [SerializeField]
     private Transform _grabTransform;
 
-    [SerializeField] private SoundPlayer _dropSounds;
+    [SerializeField]
+    private SoundPlayer _dropSounds;
+
     private AudioPlayer _audioPlayer;
-    
+
     private enum GrabState
     {
         Waiting,
@@ -53,7 +55,8 @@ public class GrabController : MonoBehaviour
                 continue;
 
             var pickedFoodSound = overlap.GetComponent<FoodSound>();
-            pickedFoodSound.sounds.PlayRandomSound();
+            if (pickedFoodSound != null && pickedFoodSound.sounds != null)
+                pickedFoodSound.sounds.PlayRandomSound();
 
             return grabableObject;
         }
@@ -108,7 +111,7 @@ public class GrabController : MonoBehaviour
                 return;
 
             _animator.SetTrigger(GrabAnimName);
-            
+
             _grabRoutine = StartCoroutine(GrabRoutine());
         }
     }
