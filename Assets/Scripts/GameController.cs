@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class GameController : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class GameController : MonoBehaviour
     
     private void Start()
     {
-        
+        SpawnState();
     }
 
     private void SpawnState()
@@ -33,6 +34,10 @@ public class GameController : MonoBehaviour
         
         foreach (var itemDefinition in state.Items)
         {
+            for (var i = 0; i < itemDefinition.Count; i++)
+            {
+                var instance = Object.Instantiate(itemDefinition.Item);
+            }
             
         }
     }
