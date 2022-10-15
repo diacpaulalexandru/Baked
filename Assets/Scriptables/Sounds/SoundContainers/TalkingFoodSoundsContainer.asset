@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23e3a18c5e5e4c2ca6471c50000ca135, type: 3}
-  m_Name: TalkingFood
+  m_Name: TalkingFoodSoundsContainer
   m_EditorClassIdentifier: 
   soundsClip:
   - {fileID: 8300000, guid: 23225215228b98f40bb87a7727f77003, type: 3}

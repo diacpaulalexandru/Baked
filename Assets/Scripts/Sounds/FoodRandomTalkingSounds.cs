@@ -3,7 +3,6 @@ using Random = UnityEngine.Random;
 
 public class FoodRandomTalkingSounds : MonoBehaviour
 {
-    [SerializeField] private Transform _foodCounter;
     [SerializeField] private SoundPlayer _soundPlayer;
     private AudioPlayer _audioPlayer;
 
@@ -12,14 +11,14 @@ public class FoodRandomTalkingSounds : MonoBehaviour
 
     private void Start()
     {
-        _initialFoodNumber = _foodCounter.childCount;
+        _initialFoodNumber = FindObjectsOfType<FoodSound>().Length;
     }
 
     private void Update()
     {
         if (Time.fixedTime > _soundTimer)
         {
-            _soundTimer += Random.Range(2, 3) + _initialFoodNumber / _foodCounter.childCount;
+            _soundTimer += Random.Range(2, 3) + _initialFoodNumber / FindObjectsOfType<FoodSound>().Length;
             _soundPlayer.PlayRandomSound();
         }
     }

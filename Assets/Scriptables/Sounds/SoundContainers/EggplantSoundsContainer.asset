@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23e3a18c5e5e4c2ca6471c50000ca135, type: 3}
-  m_Name: EggplantSounds
+  m_Name: EggplantSoundsContainer
   m_EditorClassIdentifier: 
   soundsClip:
   - {fileID: 8300000, guid: ed83cafcff7a36f4aae04a80664cef5c, type: 3}

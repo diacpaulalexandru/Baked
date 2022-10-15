@@ -168,6 +168,10 @@ PrefabInstance:
       propertyPath: _states.Array.data[1]
       value: 
       objectReference: {fileID: 9135119583288326301}
+    - target: {fileID: 6513512787059841671, guid: 0c601945160c06141b69932c3af98639, type: 3}
+      propertyPath: sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: bb94db6030c5af44fa56375330728a9d, type: 2}
     m_RemovedComponents:
     - {fileID: 3451925096467017928, guid: 0c601945160c06141b69932c3af98639, type: 3}
     - {fileID: 1638515325704159437, guid: 0c601945160c06141b69932c3af98639, type: 3}

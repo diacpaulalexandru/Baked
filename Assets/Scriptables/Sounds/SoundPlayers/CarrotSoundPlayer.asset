@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23e3a18c5e5e4c2ca6471c50000ca135, type: 3}
-  m_Name: GrabSounds
+  m_Script: {fileID: 11500000, guid: dc47da3f577ee0b4a8508dc909dc929d, type: 3}
+  m_Name: CarrotSoundPlayer
   m_EditorClassIdentifier: 
-  soundsClip:
-  - {fileID: 8300000, guid: 82e82ed05bc7b4a43a3237e2776ec01f, type: 3}
+  soundContainer: {fileID: 11400000, guid: 68280723ff5f5514bac2dc0b2219cb64, type: 2}
+  soundScriptable: {fileID: 11400000, guid: 7cd043c4131d98245940667c60d981d3, type: 2}

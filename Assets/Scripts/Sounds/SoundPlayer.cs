@@ -2,7 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SoundPlayer : MonoBehaviour
+[CreateAssetMenu(fileName = "SoundPlayer.asset", menuName = "Sounds/SoundPlayer")]
+public class SoundPlayer : ScriptableObject
 {
     [SerializeField] private SoundsContainer soundContainer;
 
