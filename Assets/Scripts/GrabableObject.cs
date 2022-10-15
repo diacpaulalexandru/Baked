@@ -1,20 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class GrabableObject : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody _rigidbody;
+
+    public event Action Grabbed;
+    
+    public event Action Dropped;
     
     public void PickUp()
     {
-        _rigidbody.isKinematic = true;
+        Grabbed?.Invoke();
     }
 
     public void Drop()
     {
-        _rigidbody.isKinematic = false;
+        Dropped?.Invoke();
     }
     
 }
