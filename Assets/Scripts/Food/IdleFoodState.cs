@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class IdleFoodState : BaseState
 {
-    public float Wait = 3;
+    public float WaitMin = 3;
+    public float WaitMax = 7;
 
     public BaseState NextState;
-    
+
     public override void OnEnter()
     {
         base.OnEnter();
@@ -22,7 +23,7 @@ public class IdleFoodState : BaseState
 
     private IEnumerator WaitAndRoam()
     {
-        yield return new WaitForSeconds(Wait);
+        yield return new WaitForSeconds(Random.Range(WaitMin, WaitMax));
         GoToState(NextState);
     }
 }
