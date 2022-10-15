@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 1638515325704159475}
   - component: {fileID: 3451925096467017928}
   - component: {fileID: 6513512787059841671}
+  - component: {fileID: 2849077926209371352}
   m_Layer: 0
   m_Name: FoodPlayer
   m_TagString: Untagged
@@ -242,6 +243,7 @@ MonoBehaviour:
   - {fileID: 1638515325704159437}
   - {fileID: 1638515325704159475}
   - {fileID: 3451925096467017928}
+  - {fileID: 2849077926209371352}
 --- !u!114 &1638515325704159438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,3 +341,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds: {fileID: 0}
+--- !u!114 &2849077926209371352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638515325704159425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f9457bc0b9ac346a373e847c3ece91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

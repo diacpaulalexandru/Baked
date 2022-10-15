@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using SimpleFSM;
 using UnityEngine;
 
 public class GrabController : MonoBehaviour
@@ -54,10 +55,6 @@ public class GrabController : MonoBehaviour
             if (grabableObject == null)
                 continue;
 
-            var pickedFoodSound = overlap.GetComponent<FoodSound>();
-            if (pickedFoodSound != null && pickedFoodSound.sounds != null)
-                pickedFoodSound.sounds.PlayRandomSound();
-
             return grabableObject;
         }
 
@@ -72,6 +69,13 @@ public class GrabController : MonoBehaviour
         var underHand = GetUnderHand();
         if (underHand == null)
             return;
+
+        if (underHand.GetComponent<StateMachine>().GameState is PrepareState)
+            return;
+
+        var pickedFoodSound = underHand.GetComponent<FoodSound>();
+        if (pickedFoodSound != null && pickedFoodSound.sounds != null)
+            pickedFoodSound.sounds.PlayRandomSound();
 
         _hold = underHand;
         _hold.transform.parent = _grabTransform;
