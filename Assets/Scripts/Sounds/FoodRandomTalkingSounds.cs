@@ -19,7 +19,7 @@ public class FoodRandomTalkingSounds : MonoBehaviour
     {
         if (Time.fixedTime > _soundTimer)
         {
-            _soundTimer += Random.Range(2, 3) + _foodCounter.childCount / _initialFoodNumber;
+            _soundTimer += Random.Range(2, 3) + _initialFoodNumber / _foodCounter.childCount;
             _soundPlayer.PlayRandomSound();
         }
     }
