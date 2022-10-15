@@ -253,7 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a4260c39b10004eba78fce296a7ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wait: 5
+  WaitMin: 5
+  WaitMax: 12
   NextState: {fileID: 1638515325704159437}
 --- !u!114 &1638515325704159437
 MonoBehaviour:
