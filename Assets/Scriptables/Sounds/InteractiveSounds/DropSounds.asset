@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e3a18c5e5e4c2ca6471c50000ca135, type: 3}
+  m_Name: DropSounds
+  m_EditorClassIdentifier: 
+  soundsClip:
+  - {fileID: 8300000, guid: df3153b1ca5bd7345aceb16b5cbe9397, type: 3}
+  - {fileID: 8300000, guid: f21e2921f0a87c140a62df7ea1a92bae, type: 3}
+  - {fileID: 8300000, guid: 714046fdf6e55be44b023389e5b267e6, type: 3}
+  - {fileID: 8300000, guid: 5cddec17f8c5008428691fce6426be28, type: 3}
+  - {fileID: 8300000, guid: 28290fbb63408cc47a6eaaa1e93a958d, type: 3}
+  - {fileID: 8300000, guid: 50568bd68dd0ac1429bf5526bdbee877, type: 3}

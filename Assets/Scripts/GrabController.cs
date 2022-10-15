@@ -20,6 +20,9 @@ public class GrabController : MonoBehaviour
     [SerializeField]
     private Transform _grabTransform;
 
+    [SerializeField] private SoundPlayer _dropSounds;
+    private AudioPlayer _audioPlayer;
+    
     private enum GrabState
     {
         Waiting,
@@ -48,6 +51,9 @@ public class GrabController : MonoBehaviour
             var grabableObject = overlap.GetComponent<GrabableObject>();
             if (grabableObject == null)
                 continue;
+
+            var pickedFoodSound = overlap.GetComponent<FoodSound>();
+            pickedFoodSound.sounds.PlayRandomSound();
 
             return grabableObject;
         }
@@ -85,6 +91,7 @@ public class GrabController : MonoBehaviour
                 _hold.Drop();
                 _hold.transform.parent = null;
                 _hold = null;
+                Invoke(nameof(PlayDropSound), 0.5f);
             }
 
             if (_grabRoutine != null)
@@ -101,7 +108,7 @@ public class GrabController : MonoBehaviour
                 return;
 
             _animator.SetTrigger(GrabAnimName);
-
+            
             _grabRoutine = StartCoroutine(GrabRoutine());
         }
     }
@@ -117,6 +124,11 @@ public class GrabController : MonoBehaviour
         if (_grabPoint == null)
             return;
         Gizmos.DrawWireSphere(_grabPoint.position, _grabRadius);
+    }
+
+    private void PlayDropSound()
+    {
+        _dropSounds.PlayRandomSound();
     }
 
     // public IEnumerator GrabRoutine()

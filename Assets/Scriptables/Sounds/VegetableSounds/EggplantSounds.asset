@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e3a18c5e5e4c2ca6471c50000ca135, type: 3}
+  m_Name: EggplantSounds
+  m_EditorClassIdentifier: 
+  soundsClip:
+  - {fileID: 8300000, guid: ed83cafcff7a36f4aae04a80664cef5c, type: 3}
+  - {fileID: 8300000, guid: fb1dd67423c1a274595202fc33ece8d1, type: 3}
+  - {fileID: 8300000, guid: 9a5b936ccccb3a842ae146b4b0dc1d2a, type: 3}
+  - {fileID: 8300000, guid: 3935b9568ce6cfd419d07c91de28a315, type: 3}
+  - {fileID: 8300000, guid: 527dd29717b2131479d817a42b7e2b46, type: 3}
+  - {fileID: 8300000, guid: e583a1f15506ce245a66231d7cff4da1, type: 3}
+  - {fileID: 8300000, guid: 749b7cc455457e04ca630702ec339961, type: 3}
+  - {fileID: 8300000, guid: 3e97dec4621d1c443af681d3c1659111, type: 3}

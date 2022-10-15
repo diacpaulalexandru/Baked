@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e3a18c5e5e4c2ca6471c50000ca135, type: 3}
+  m_Name: BroccoliSounds
+  m_EditorClassIdentifier: 
+  soundsClip:
+  - {fileID: 8300000, guid: 3ea0459899037174f847030ada0288a7, type: 3}
+  - {fileID: 8300000, guid: 2281e0185f1da7a459743ac4ed797fe4, type: 3}
+  - {fileID: 8300000, guid: 684b9db3a35b5874cbd18ce4d2ead1fc, type: 3}
+  - {fileID: 8300000, guid: 368fd208efbc78044bc57ef96460b9ca, type: 3}
+  - {fileID: 8300000, guid: 24dfe99f7aa7a2c449e5ae2db0fcff76, type: 3}
+  - {fileID: 8300000, guid: 44bcd18bfe91b6140bd60d150df8ac46, type: 3}

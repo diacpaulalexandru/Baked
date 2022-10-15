@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e3a18c5e5e4c2ca6471c50000ca135, type: 3}
+  m_Name: CarrotSounds
+  m_EditorClassIdentifier: 
+  soundsClip:
+  - {fileID: 8300000, guid: 50b4b058841facd4b89634e3061f0618, type: 3}
+  - {fileID: 8300000, guid: 3ead7e73744fcf043940a86b77a911a0, type: 3}
+  - {fileID: 8300000, guid: 76616a1b9c9880241a654b9977d2241a, type: 3}
+  - {fileID: 8300000, guid: 044aebbbbe517b3488903d4d77a16826, type: 3}
+  - {fileID: 8300000, guid: b68cb06166d637d4f9345cd5547ecbe1, type: 3}
+  - {fileID: 8300000, guid: 51e41473d8d61ca458aa402ee4aa2b4f, type: 3}
+  - {fileID: 8300000, guid: 445f391eea72ff643bdc21697849ea67, type: 3}
