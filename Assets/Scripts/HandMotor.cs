@@ -23,7 +23,7 @@ public class HandMotor : MonoBehaviour
         //var coll = GetComponent<Collider>();
         var dir = new Vector3(_dir.x, 0, _dir.y);
 
-        var maxDistance = Speed * Time.deltaTime;
+        var maxDistance = Speed;
 
         _rigidbody.velocity = dir * maxDistance;
 
