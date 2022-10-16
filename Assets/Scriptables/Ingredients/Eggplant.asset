@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a334347d7a482459b9e1f01ca1ca9e, type: 3}
-  m_Name: Carrot
+  m_Name: Eggplant
   m_EditorClassIdentifier: 
-  PublicName: Morcov
+  PublicName: Eggplant
+  FlySprite: {fileID: 21300000, guid: 19167632afb52f841bdbc8fde3ce9203, type: 3}

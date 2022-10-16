@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17068296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.88, y: 0, z: -7.44}
+  m_LocalPosition: {x: -8.27, y: 0, z: -5.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2708,16 +2708,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163894926}
-  m_LocalRotation: {x: 0, y: 0.19680177, z: 0, w: 0.98044336}
-  m_LocalPosition: {x: 8.62, y: 0.11, z: 1.86}
+  m_LocalRotation: {x: 0, y: 0.12013682, z: 0, w: 0.9927574}
+  m_LocalPosition: {x: 10.97, y: 0.11, z: 0.93}
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 456039055}
   - {fileID: 955392726}
+  - {fileID: 1721101064}
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 22.7, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 13.8, z: 0}
 --- !u!208 &1163894929
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -3174,6 +3175,7 @@ GameObject:
   - component: {fileID: 1537405011}
   - component: {fileID: 1537405012}
   - component: {fileID: 1537405013}
+  - component: {fileID: 1537405014}
   m_Layer: 7
   m_Name: Hand
   m_TagString: Untagged
@@ -3243,6 +3245,23 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
+--- !u!114 &1537405014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537405008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69cbc8ebb19393f4cb37cf92c36aec51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _default: {fileID: 21300000, guid: 65a702345962c8d4da2a64188d15afa9, type: 3}
+  _grab: {fileID: 21300000, guid: 2d13f900274702b4296652609da721bb, type: 3}
+  _grabBottle: {fileID: 21300000, guid: 6f51e7ae35509184b889fb52f0b898ed, type: 3}
+  _renderer: {fileID: 1982084419}
+  _grabController: {fileID: 437369181}
 --- !u!1 &1538048161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,6 +3483,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1721101063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721101064}
+  m_Layer: 0
+  m_Name: Oala
+  m_TagString: Oala
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1721101064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721101063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.04, y: 0, z: 2.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1163894928}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1770040570
 GameObject:
@@ -3813,8 +3863,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.63, y: 2.220446e-16, z: 10.000001}
-  m_Center: {x: -0.94, y: 0, z: -0.0000009536743}
+  m_Size: {x: 7.27, y: 2.220446e-16, z: 10.000001}
+  m_Center: {x: -1.22, y: 0, z: -0.0000009536743}
 --- !u!1 &1981907305
 GameObject:
   m_ObjectHideFlags: 0

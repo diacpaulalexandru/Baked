@@ -24,6 +24,8 @@ public class GrabController : MonoBehaviour
     [SerializeField]
     private SoundPlayer _dropSounds;
 
+    public GrabableObject Current => _hold;
+    
     private AudioPlayer _audioPlayer;
 
     private enum GrabState
@@ -69,9 +71,13 @@ public class GrabController : MonoBehaviour
         var underHand = GetUnderHand();
         if (underHand == null)
             return;
-
-        if (underHand.GetComponent<StateMachine>().GameState is PrepareState)
+        
+        if (underHand.TryGetComponent(out StateMachine stateMachine) && 
+            (stateMachine.GameState is PrepareState ||
+             stateMachine.GameState is CutState))
+        { 
             return;
+        }
 
         var pickedFoodSound = underHand.GetComponent<FoodSound>();
         if (pickedFoodSound != null && pickedFoodSound.sounds != null)

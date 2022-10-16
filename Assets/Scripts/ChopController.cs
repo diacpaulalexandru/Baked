@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using SimpleFSM;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -58,7 +59,15 @@ public class ChopController : MonoBehaviour
     private void OnChop()
     {
         var underKnife = GetUnderKnife();
-        Debug.Log(underKnife);
+        
+        if(underKnife==null)
+            return;
+        
+        if (underKnife.TryGetComponent(out StateMachine stateMachine) && 
+            stateMachine.GameState is PrepareState prepareState)
+        {
+            prepareState.Cut();
+        }
     }
 
     public void Chop()

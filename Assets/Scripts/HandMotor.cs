@@ -7,7 +7,7 @@ public class HandMotor : MonoBehaviour
     private Vector2 _dir;
 
     private Rigidbody _rigidbody;
-    
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -26,5 +26,8 @@ public class HandMotor : MonoBehaviour
         var maxDistance = Speed * Time.deltaTime;
 
         _rigidbody.velocity = dir * maxDistance;
+
+        var target = Quaternion.Euler(_dir.y * 5, 0, _dir.x * -5);
+        transform.rotation = Quaternion.Lerp(transform.rotation, target, 10 * Time.deltaTime);
     }
 }

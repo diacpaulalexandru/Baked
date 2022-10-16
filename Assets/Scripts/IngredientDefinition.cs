@@ -4,4 +4,6 @@ using UnityEngine;
 public class IngredientDefinition : ScriptableObject
 {
     public string PublicName;
+
+    public Sprite FlySprite;
 }
