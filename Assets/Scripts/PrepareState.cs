@@ -10,7 +10,7 @@ public class PrepareState : BaseState
     {
         if (collision.gameObject.CompareTag("Fund") == false)
             return;
-
+Debug.Log(collision.gameObject);
         if (StateMachine == null)
             return;
 

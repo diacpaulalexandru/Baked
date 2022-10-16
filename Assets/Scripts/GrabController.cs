@@ -50,6 +50,7 @@ public class GrabController : MonoBehaviour
         _grabEventListener.Grab -= DoGrab;
     }
 
+    
     private GrabableObject GetUnderHand()
     {
         var overlaps = Physics.OverlapSphere(_grabPoint.position, _grabRadius);
