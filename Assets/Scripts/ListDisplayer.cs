@@ -26,7 +26,7 @@ public class ListDisplayer : MonoBehaviour
     private void Update()
     {
         if (_rectTransform.childCount == 0)
-            _generalText.text = "Haide bea ai incredere!";
+            _generalText.text = "Haide bea, ai incredere!";
     }
 
     private void Spawned()

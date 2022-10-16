@@ -22,6 +22,9 @@ public class ChopController : MonoBehaviour
 
     public Vector3 Extents = Vector3.one;
 
+    [SerializeField] private SoundPlayer _chopSoundPlayer;
+    private AudioPlayer _audioPlayer;
+    
     private void Start()
     {
         ChopEventListener.Chop += OnChop;
@@ -81,6 +84,7 @@ public class ChopController : MonoBehaviour
     {
         Chopping = true;
         _animator.SetBool(ChopAnimName, true);
+        _chopSoundPlayer.PlayRandomSound();
         yield return new WaitForSeconds(ChopDuration);
         _animator.SetBool(ChopAnimName, false);
         Chopping = false;

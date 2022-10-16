@@ -26,8 +26,11 @@ public class GrabController : MonoBehaviour
 
     public GrabableObject Current => _hold;
 
-    private AudioPlayer _audioPlayer;
+    [SerializeField] private SoundPlayer _dogDropSoundPlayer;
 
+    [SerializeField] private SoundPlayer _afterDrinkSoundPlayer;
+    private AudioPlayer _audioPlayer;
+    
     private enum GrabState
     {
         Waiting,
@@ -94,7 +97,7 @@ public class GrabController : MonoBehaviour
         if (_hold.GetComponent<BottleController>())
         {
             _animator.SetTrigger("Drink");
-            Debug.Log("Drink sound here!");
+            Invoke(nameof(PlayAfterDrinkSound), 1.1f);
         }
 
         //if(_hold)
@@ -126,6 +129,7 @@ public class GrabController : MonoBehaviour
                         if (sweep.collider.CompareTag("Fund"))
                         {
                             table = true;
+                            Invoke(nameof(PlayDogDropSound), 0.3f);
                             break;
                         }
                     }
@@ -175,6 +179,16 @@ public class GrabController : MonoBehaviour
         _dropSounds.PlayRandomSound();
     }
 
+    private void PlayAfterDrinkSound()
+    {
+        _afterDrinkSoundPlayer.PlayRandomSound();
+    }
+
+    private void PlayDogDropSound()
+    {
+        _dogDropSoundPlayer.PlayRandomSound();
+    }
+    
     // public IEnumerator GrabRoutine()
     // {
     //     _animator.SetTrigger(GrabAnimName);

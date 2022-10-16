@@ -790,6 +790,7 @@ MonoBehaviour:
   ChopOverlapPoint: {fileID: 1872018180}
   ChopRotation: {x: 0, y: 0.48, z: 0}
   Extents: {x: 4.45, y: 1, z: 1}
+  _chopSoundPlayer: {fileID: 11400000, guid: 2f0778a77a76477439d9725008d76692, type: 2}
 --- !u!114 &437369181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +810,8 @@ MonoBehaviour:
   _grabRadius: 1
   _grabTransform: {fileID: 1538048162}
   _dropSounds: {fileID: 11400000, guid: 0bf4d7a00e8b0d84a9461fcb0bc9f8ae, type: 2}
+  _dogDropSoundPlayer: {fileID: 11400000, guid: 5a66777f2ff3bb94592c2f10791e74bf, type: 2}
+  _afterDrinkSoundPlayer: {fileID: 11400000, guid: 7792c4a343ce5044ea2222a4e80989dd, type: 2}
 --- !u!1001 &442604921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -865,14 +868,6 @@ PrefabInstance:
       value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 6038296639237350079, guid: ac9af2ffb57c3d048a98901f28057cca, type: 3}
-      propertyPath: States.Array.data[2].Enable.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6038296639237350079, guid: ac9af2ffb57c3d048a98901f28057cca, type: 3}
-      propertyPath: States.Array.data[3].Enable.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6038296639237350079, guid: ac9af2ffb57c3d048a98901f28057cca, type: 3}
       propertyPath: States.Array.data[2].Enable.Array.data[0]
       value: 
       objectReference: {fileID: 771532516}
@@ -880,10 +875,6 @@ PrefabInstance:
       propertyPath: States.Array.data[3].Enable.Array.data[0]
       value: 
       objectReference: {fileID: 771532516}
-    - target: {fileID: 6038296639237350079, guid: ac9af2ffb57c3d048a98901f28057cca, type: 3}
-      propertyPath: States.Array.data[3].Items.Array.data[1].Item
-      value: 
-      objectReference: {fileID: 9135119583288326319, guid: eab2a0e909405524b8d0052657bfe853, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac9af2ffb57c3d048a98901f28057cca, type: 3}
 --- !u!1 &442793571
