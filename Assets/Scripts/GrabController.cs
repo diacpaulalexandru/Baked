@@ -90,6 +90,14 @@ public class GrabController : MonoBehaviour
         _hold.transform.parent = _grabTransform;
         _hold.transform.localPosition = Vector3.zero;
         _hold.PickUp();
+
+        if (_hold.GetComponent<BottleController>())
+        {
+            _animator.SetTrigger("Drink");
+            Debug.Log("Drink sound here!");
+        }
+
+        //if(_hold)
     }
 
     private bool _grab;
