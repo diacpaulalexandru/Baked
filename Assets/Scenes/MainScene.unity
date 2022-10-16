@@ -880,6 +880,10 @@ PrefabInstance:
       propertyPath: States.Array.data[3].Enable.Array.data[0]
       value: 
       objectReference: {fileID: 771532516}
+    - target: {fileID: 6038296639237350079, guid: ac9af2ffb57c3d048a98901f28057cca, type: 3}
+      propertyPath: States.Array.data[3].Items.Array.data[1].Item
+      value: 
+      objectReference: {fileID: 9135119583288326319, guid: eab2a0e909405524b8d0052657bfe853, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac9af2ffb57c3d048a98901f28057cca, type: 3}
 --- !u!1 &442793571
