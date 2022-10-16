@@ -776,6 +776,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0294d708b5576419a5da843fed0f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4818591659344291454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1136023424224541841}
+  - component: {fileID: 3104324376288855576}
+  m_Layer: 0
+  m_Name: Eyes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1136023424224541841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818591659344291454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2902267304476515944}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3104324376288855576
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818591659344291454}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1200
+  m_Sprite: {fileID: 21300000, guid: 552039b978a7e764bb1a0e322aa3270f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.0533333, y: 1.57}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &5848145401013670589
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +1028,22 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4629057619442640390, guid: 0c601945160c06141b69932c3af98639, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629057619442640390, guid: 0c601945160c06141b69932c3af98639, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629057619442640390, guid: 0c601945160c06141b69932c3af98639, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629057619442640390, guid: 0c601945160c06141b69932c3af98639, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5521412510652963071, guid: 0c601945160c06141b69932c3af98639, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -952,15 +1052,24 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ada3ccf56ce088b47a57b0982c1eea29, type: 3}
+    - target: {fileID: 6513512787059841671, guid: 0c601945160c06141b69932c3af98639, type: 3}
+      propertyPath: sounds
+      value: 
+      objectReference: {fileID: 11400000, guid: be2188acbaae2ef4a8582c96ea52be1b, type: 2}
     - target: {fileID: 7674403278679822364, guid: 0c601945160c06141b69932c3af98639, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 86aa6bf603d0d9649a0a9ca9366c6b7f, type: 3}
+      objectReference: {fileID: 21300000, guid: cf0a127c9c850d7438ade158eebaab88, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c601945160c06141b69932c3af98639, type: 3}
 --- !u!4 &2658430761226608785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5521412510652963071, guid: 0c601945160c06141b69932c3af98639, type: 3}
+  m_PrefabInstance: {fileID: 7528712209061132398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2902267304476515944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4629057619442640390, guid: 0c601945160c06141b69932c3af98639, type: 3}
   m_PrefabInstance: {fileID: 7528712209061132398}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &9135119583288326300 stripped
@@ -979,6 +1088,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1638515325704159425, guid: 0c601945160c06141b69932c3af98639, type: 3}
   m_PrefabInstance: {fileID: 7528712209061132398}
   m_PrefabAsset: {fileID: 0}
+--- !u!210 &351553499947252426
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135119583288326319}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &4071045075877860174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135119583288326319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c915a7bdfbe16142838c91f4d9f501f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eyes: {fileID: 4818591659344291454}
 --- !u!114 &6989272421298522125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,3 +1125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _grabable: {fileID: 9135119583288326300}
+  _soundPlayer: {fileID: 11400000, guid: 68a909e12784f454885ec977a92183a4, type: 2}
+  Chance: 0.4
