@@ -96,6 +96,7 @@ public class GrabController : MonoBehaviour
 
     private Coroutine _grabRoutine;
 
+
     public void Grab(bool grab)
     {
         _grab = grab;
@@ -106,7 +107,24 @@ public class GrabController : MonoBehaviour
             {
                 _hold.Drop();
                 if (_hold.TryGetComponent<FoodSound>(out _))
-                    Invoke(nameof(PlayDropSound), 0.5f);
+                {
+                    var rgd = _hold.GetComponent<Rigidbody>();
+
+                    var sweeps = rgd.SweepTestAll(Vector3.down);
+
+                    bool table = false;
+                    foreach (var sweep in sweeps)
+                    {
+                        if (sweep.collider.CompareTag("Fund"))
+                        {
+                            table = true;
+                            break;
+                        }
+                    }
+
+                    if (table == false)
+                        Invoke(nameof(PlayDropSound), 0.5f);
+                }
 
                 _hold.transform.parent = null;
                 _hold = null;
