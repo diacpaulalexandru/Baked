@@ -13,28 +13,19 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> mainMenuScreens;
-    // [SerializeField] private AudioClip mainMenuFirstSong;
-    // [SerializeField] private AudioClip mainMenuSecondSong;
-    // [SerializeField] private AudioPlayerScriptable mainMenuScriptable;
     [SerializeField] private AudioPlayerScriptable soundManagerScriptable;
     [SerializeField] private AudioClip clickSound;
     private AudioPlayer mainMenuSoundSource;
     private int nextSceneIndex = 1;
+
+    [SerializeField] private SoundPlayer _mainMusicPlayer;
+    private AudioPlayer _audioPlayer;
     
     private void Start()
     {
-        // mainMenuSoundSource = mainMenuScriptable.Play(mainMenuFirstSong);
-        // mainMenuSoundSource.Source.loop = false;
-        //
-        // while (mainMenuSoundSource.Source!=null &&
-        //        mainMenuSoundSource.Source.isPlaying)
-        // {
-        //     yield return null;
-        // }
-        // yield return null;
-        // mainMenuSoundSource = mainMenuScriptable.Play(mainMenuSecondSong);
+        mainMenuSoundSource = _mainMusicPlayer.PlayRandomSound();
+        mainMenuSoundSource.Source.loop = true;
     }
-
 
     public void SetScreen(int index)
     {
@@ -59,17 +50,15 @@ public class MainMenuManager : MonoBehaviour
 
     private async Task LoadSceneAsync()
     {
-        // Destroy(this);
+        Destroy(this);
         
         soundManagerScriptable.Play(clickSound);
-        // Destroy(mainMenuSoundSource.gameObject);
+        Destroy(mainMenuSoundSource.gameObject);
 
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextSceneIndex, LoadSceneMode.Single);
         while (asyncLoad.isDone == false)
-        {
             await Task.Yield();
-        }
     }
 
     public void QuitGame()
