@@ -65,7 +65,6 @@ public class GameController : MonoBehaviour
                 res = t.Key;
             }
         }
-Debug.Log(res);
         return res;
     }
 
