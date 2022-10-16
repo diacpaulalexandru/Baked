@@ -19,8 +19,6 @@ public class CutState : BaseState
     {
         State.SetActive(false);
         Default.SetActive(true);
-        var rgd = GetComponent<Rigidbody>();
-        rgd.isKinematic = true;
     }
 
     public override void OnEnter()
