@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
         }
 
         public ItemDefinition[] Items;
+        public GameObject[] Enable;
     }
 
     public StateDefinition[] States;
@@ -81,6 +82,11 @@ public class GameController : MonoBehaviour
                 var pt= GetPoint().position;
                 var instance = Object.Instantiate(itemDefinition.Item);
                 instance.transform.position = pt + new Vector3(0, 1, 0);
+            }
+
+            foreach (var component in state.Enable)
+            {
+                component.SetActive(true);
             }
         }
 

@@ -6,17 +6,23 @@ public class GrabController : MonoBehaviour
 {
     public string GrabAnimName = "Grab";
 
-    [SerializeField] private Animator _animator;
+    [SerializeField]
+    private Animator _animator;
 
-    [SerializeField] private GrabEventListener _grabEventListener;
+    [SerializeField]
+    private GrabEventListener _grabEventListener;
 
-    [SerializeField] private Transform _grabPoint;
+    [SerializeField]
+    private Transform _grabPoint;
 
-    [SerializeField] private float _grabRadius;
+    [SerializeField]
+    private float _grabRadius;
 
-    [SerializeField] private Transform _grabTransform;
+    [SerializeField]
+    private Transform _grabTransform;
 
-    [SerializeField] private SoundPlayer _dropSounds;
+    [SerializeField]
+    private SoundPlayer _dropSounds;
 
     public GrabableObject Current => _hold;
 
@@ -72,6 +78,9 @@ public class GrabController : MonoBehaviour
         {
             return;
         }
+
+        if (underHand.TryPick() == false)
+            return;
 
         var pickedFoodSound = underHand.GetComponent<FoodSound>();
         if (pickedFoodSound != null && pickedFoodSound.sounds != null)

@@ -8,6 +8,8 @@ public class GrabableObject : MonoBehaviour
     [SerializeField]
     private Rigidbody _rigidbody;
 
+    public Func<bool> CanPick;
+
     public event Action Grabbed;
     
     public event Action Dropped;
@@ -21,5 +23,9 @@ public class GrabableObject : MonoBehaviour
     {
         Dropped?.Invoke();
     }
-    
+
+    public bool TryPick()
+    {
+        return CanPick.AllTrue();
+    }
 }

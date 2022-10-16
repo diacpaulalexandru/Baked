@@ -14,14 +14,20 @@ public class FoodRandomTalkingSounds : MonoBehaviour
     private void Start()
     {
         _initialFoodNumber = FindObjectsOfType<FoodSound>().Length;
+    }
+
+    private void OnEnable()
+    {
         _stopWatch = Stopwatch.StartNew();
+        _soundTimer = Random.Range(2, 3) + _initialFoodNumber / FindObjectsOfType<FoodSound>().Length;
     }
 
     private void Update()
     {
         if (_stopWatch.Elapsed.TotalSeconds > _soundTimer)
         {
-            _soundTimer += Random.Range(2, 3) + _initialFoodNumber / FindObjectsOfType<FoodSound>().Length;
+            _stopWatch = Stopwatch.StartNew();
+            _soundTimer = Random.Range(2, 3) + _initialFoodNumber / FindObjectsOfType<FoodSound>().Length;
             _soundPlayer.PlayRandomSound();
         }
     }
